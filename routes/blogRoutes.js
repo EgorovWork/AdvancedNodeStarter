@@ -1,7 +1,5 @@
-const mongoose = require('mongoose');
+const Blog = require('../models/Blog');
 const requireLogin = require('../middlewares/requireLogin');
-
-const Blog = mongoose.model('Blog');
 
 module.exports = app => {
   app.get('/api/blogs/:id', requireLogin, async (req, res) => {
